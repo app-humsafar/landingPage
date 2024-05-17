@@ -405,7 +405,6 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  min-height: 100vh;
   background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
   position: relative;
@@ -508,10 +507,6 @@ section {
   overflow: hidden;
 }
 
-.section-title {
-  padding-bottom: 40px;
-}
-
 .section-title h2 {
   font-size: 14px;
   font-weight: 500;
@@ -612,6 +607,7 @@ section {
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
+
 .features {
   padding-top: 20px;
 }
@@ -626,7 +622,7 @@ section {
   margin: 5px 0 10px 60px;
 }
 
-.features .icon-box i {
+.features .icon-box img {
   font-size: 48px;
   float: left;
   color: #ffc451;
@@ -642,7 +638,7 @@ section {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 400px;
+  min-height: 200px;
 }
 
 /*--------------------------------------------------------------
@@ -1209,6 +1205,10 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact {
+  padding: 0;
+}
+
 .contact .info {
   width: 100%;
   background: #fff;
@@ -1245,7 +1245,7 @@ section {
 
 .contact .info .email,
 .contact .info .phone {
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 
 .contact .php-email-form {
@@ -1407,11 +1407,7 @@ section {
 #footer .footer-top {
   background: #151515;
   border-bottom: 1px solid #222222;
-  padding: 60px 0 30px 0;
-}
-
-#footer .footer-top .footer-info {
-  margin-bottom: 30px;
+  padding: 20px 0 20px 0;
 }
 
 #footer .footer-top .footer-info h3 {
