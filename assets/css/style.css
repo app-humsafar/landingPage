@@ -1542,3 +1542,51 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
+
+/*--------------------------------------------------------------
+# Thank You Page Styles
+--------------------------------------------------------------*/
+
+.thank-you-header {
+  background-color: #151515;
+  text-align: center;
+  height: 10vh;
+}
+
+.main-section {
+  position: relative;
+  height: 70vh;
+  background: url('../img/hero-bg.jpg');
+  background-size: cover;
+}
+
+.main-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.main-section .container {
+  position: relative;
+  padding-top: 64px;
+  text-align: center;
+}
+
+.main-section p {
+  color: white;
+  font-size: 14px;
+}
+
+.main-section h1 {
+  color: #ffc451;
+  font-size: 32px;
+}
+
+.thank-you-footer {
+  height: 20vh;
+}
