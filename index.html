@@ -167,6 +167,7 @@
               <div class="text-center"><button type="submit">Submit</button></div>
               <div id="messageDiv" style="display: none;">
                 <div id="errorMessage" class="text-center mt-3" style='color: red;'>Email already exists</div>
+                <div id="loadingMessage" class="text-center mt-3">Loading...</div>
               </div>
             </form>
 
@@ -260,6 +261,11 @@
       form.addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent the form from submitting normally
 
+        // show loading state
+        document.getElementById("messageDiv").style.display = "block";
+        document.getElementById("errorMessage").style.display = "none";
+        document.getElementById("loadingMessage").style.display = "block";
+
         // Get the function from the input field
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
@@ -286,12 +292,17 @@
             // Clear inputs after submission
             form.reset();
 
+            document.getElementById("messageDiv").style.display = "none";
+            document.getElementById("errorMessage").style.display = "none";
+            document.getElementById("loadingMessage").style.display = "none";
+
             // After form submission logic, redirect to the thank you page
             window.location.href = 'thankyou.html';
           })
           .catch(error => {
             document.getElementById("messageDiv").style.display = "block";
             document.getElementById("errorMessage").style.display = "block";
+            document.getElementById("loadingMessage").style.display = "none";
           });
       });
 
