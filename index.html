@@ -272,24 +272,28 @@
         // Get the function from the input field
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
+        const contactNumber = document.getElementById("phone").value;
         const gender = document.getElementById("gender").value;
         const age = document.getElementById("age").value;
         const educationLevel = document.getElementById("educationLevel").value;
         const institute = document.getElementById("institute").value;
         const academy = document.getElementById("academy").value;
 
+
         fetch("https://humsafar-satgging-be-78ceb721e8d8.herokuapp.com/users/preRegister", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify({ name, email, gender, age, educationLevel, institute, academy })
+          body: JSON.stringify({ name, email, contactNumber, gender, age, educationLevel, institute, academy })
         })
           .then(response => {
             if (!response.ok) {
               throw new Error("Network response was not ok");
+              console.log('error')
             }
             return response.json();
+            console.log('res', response.json());
           })
           .then(() => {
             // Clear inputs after submission
